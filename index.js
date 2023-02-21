@@ -30,7 +30,51 @@ const managerQuestions = [
   },
 ];
 //engineer
+const engineerQuestions = [
+  {
+    type: "input",
+    message: "Enter Engineer's name:",
+    name: "engineerName",
+  },
+  {
+    type: "input",
+    message: "Enter Engineer's employee ID:",
+    name: "engineerId",
+  },
+  {
+    type: "input",
+    message: "Enter Engineer's email address:",
+    name: "engineerEmail",
+  },
+  {
+    type: "input",
+    message: "Enter Engineer's github username:",
+    name: "github",
+  },
+];
 //intern
+const internQuestions = [
+  {
+    type: "input",
+    message: "Enter Intern's name:",
+    name: "internName",
+  },
+  {
+    type: "input",
+    message: "Enter Intern's employee ID:",
+    name: "internId",
+  },
+  {
+    type: "input",
+    message: "Enter Intern's email address",
+    name: "internEmail",
+  },
+  {
+    type: "input",
+    message: "Enter Intern's school",
+    name: "school",
+  },
+];
 //checkpoint
 
 // Function to generate HTML template literal
