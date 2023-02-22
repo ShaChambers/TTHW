@@ -166,7 +166,55 @@ function writetoFile() {
   });
 }
 // Function to get manager data
+function getManager() {
+  inquirer.prompt(managerQuestions).then((response) => {
+    const manager = new Manager(
+      response.managerName,
+      response.managerId,
+      response.managerEmail,
+      response.officeNumber
+    );
+    employeeList.push(manager);
+    nextEmployee();
+  });
+}
 // Function to prompt next employee card
+function nextEmployee() {
+  inquirer.prompt(menuQuestions).then((response) => {
+    if ("add an engineer" === response.menu) {
+      return getEngineer();
+    } else if ("add an intern" === response.menu) {
+      return getIntern();
+    } else {
+      return writetoFile();
+    }
+  });
+}
 // Function to get engineer data
+function getEngineer() {
+  inquirer.prompt(engineerQuestions).then((response) => {
+    const engineer = new Engineer(
+      response.engineerName,
+      response.engineerId,
+      response.engineerEmail,
+      response.github
+    );
+    employeeList.push(engineer);
+    nextEmployee();
+  });
+}
 // Function to get intern data
+function getIntern() {
+  inquirer.prompt(internQuestions).then((response) => {
+    const intern = new Intern(
+      response.internName,
+      response.internId,
+      response.internEmail,
+      response.school
+    );
+    employeeList.push(intern);
+    nextEmployee();
+  });
+}
 // Function call to initialize app
+getManager();
