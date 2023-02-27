@@ -29,7 +29,7 @@ To use the application, npm i in your terminal and begin responding to the promp
 
 ## Credits
 
-Collaborators: Sha Chambers
+Collaborators: Sha Chambers 
 
 ## License
 
@@ -37,7 +37,7 @@ This application is covered under the MIT license.
 
 ## Contributing
 
-N/A
+Amaryah Wolf - Temperal Literal Code
 
 ## Tests
 
